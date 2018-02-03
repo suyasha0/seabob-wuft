@@ -1,28 +1,49 @@
+body {
+  background: rgb(242, 242, 242);
+  font-family: 'Roboto Slab', serif;
+}
+
+div{
+  position: relative;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App-container{
+  height: 90vh;
+  width: 90%;
+  border-radius: 10px;
+  background: white;
+  margin: 2em auto 2em;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.App-logo {
+  animation: App-logo-spin 20s linear;
+  animation-duration: 1s;
+  width: 70%;
+  padding-top: 10%;
+}
+
+.App-sidebar {
+  background-color: rgb(0, 182, 36);
+  width: 7%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .App-title {
+  position: fixed;
+  top: 8%;
+  left: 15%;
   font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  to { transform-origin: rotate(360deg); }
 }
