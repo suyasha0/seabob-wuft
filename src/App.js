@@ -34,8 +34,8 @@ fetch(request).then(response=>response.json())
             <div className="App-desc"> 
             <div id="name">Name</div> 
             <div>Gender</div>
-            <div>Birth</div>
-            <div>Language: ENGLISH</div>
+            <div>Age</div>
+            <div>Preferred Language: ENGLISH</div>
             </div>
             <div className="App-calls">
               <h4>Call History</h4>
@@ -67,10 +67,74 @@ fetch(request).then(response=>response.json())
             </label>
             <input type="submit" value="Submit" />
             </form> </div>
-            <div className="App-specs">
-              <p>Estimated Salary: $20,000-$30,000</p>
+            <div className="App-transactions">
+              <h4>Transaction History</h4>
+              <table class="table text-center">
+              <tbody>
+                <tr>
+                  <td>Date</td>
+                  <td>Amount</td>
+                </tr>
+                <tr>
+                  <td>2/2/2018</td>
+                  <td>$8.97</td>
+                </tr>
+                <tr>
+                  <td>1/27/18</td>
+                  <td>$42.50</td>
+                </tr>
+                <tr>
+                  <td>1/24/18</td>
+                  <td>$9.73</td>
+                </tr>
+              </tbody>
+            </table>
             </div>
-            <div className="App-social" />
+            <div className="App-personal">
+              <h4>Personal</h4>
+              <table class="table text-center">
+              <tbody>
+                <tr>
+                  <td>Hobbies</td>
+                  <td>Golf, Chess</td>
+                </tr>
+                <tr>
+                  <td>Marital Status</td>
+                  <td>Married</td>
+                </tr>
+                <tr>
+                  <td>Languages</td>
+                  <td>Spanish, English</td>
+                </tr>
+                <tr>
+                  <td>Subscriptions</td>
+                  <td>Amazon Prime, Netflix</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            <div className="App-social">
+            <h4>Professional History</h4>
+              <table class="table text-center">
+              <tbody>
+                <tr>
+                  <td>Profession</td>
+                  <td>Civil Engineer</td>
+                </tr>
+                <tr>
+                  <td>Organization</td>
+                  <td>MTA</td>
+                </tr>
+                <tr>
+                  <td>Estimated Salary</td>
+                  <td>$70,000 - $80,000</td>
+                </tr>
+                <tr>
+                  <td>Highest Education</td>
+                  <td>NYU Tandon, Engineering BS</td>
+                </tr>
+              </tbody>
+            </table></div>
             </div>
      </div> 
     );
