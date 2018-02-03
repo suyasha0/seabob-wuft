@@ -55,11 +55,40 @@ class App extends Component {
             <div>Birth</div>
             <div>Language: ENGLISH</div>
             </div>
-            <div className="App-calls" />
-            <div className="App-input" />
-            <div className="App-specs">
-            <div className="text">Estimated Salary: $20,000-$30,000</div>
+            <div className="App-calls">
+              <h4>Call History</h4>
+              <table class="table text-center">
+              <tbody>
+                <tr>
+                  <td>Date</td>
+                  <td>2/1/2018</td>
+                </tr>
+                <tr>
+                  <td>Duration</td>
+                  <td>3:00:03</td>
+                </tr>
+                <tr>
+                  <td>Issue</td>
+                  <td>Lorem Epsum</td>
+                </tr>
+                <tr>
+                  <td>Employee</td>
+                  <td>Paw Newman</td>
+                </tr>
+              </tbody>
+            </table>
             </div>
+            <div className="App-input"><h3>Reason for calling: </h3> 
+            <form>
+            <label>
+              <input type="text" name="issue" />
+            </label>
+            <input type="submit" value="Submit" />
+            </form> </div>
+            <div className="App-specs">
+              <p>Estimated Salary: $20,000-$30,000</p>
+            </div>
+            <div className="App-social" />
             </div>
         <div className="panel-group">
        {

@@ -71,8 +71,7 @@ div{
   left: 13%;
   width: 30%;
   height: 40%;
-  background-color: grey;
-  opacity: .2;
+  background-color: rgba(128,128,128, .2);
   border-radius: 10px;
 }
 
@@ -97,8 +96,7 @@ div{
   left: 45%;
   width: 25%;
   height: 40%;
-  background-color: grey;
-  opacity: .2;
+  background-color: rgba(128,128,128, .2);
   border-radius: 10px;
 }
 
@@ -108,12 +106,20 @@ div{
   left: 71%;
   width: 23%;
   height: 40%;
-  background-color: grey;
-  opacity: .2;
+  background-color: rgba(128,128,128, .2);
   border-radius: 10px;
 }
 
-.text {
-  color: black;
-  opacity: 1;
+.App-social {
+  position: fixed;
+  top: 50%;
+  left: 45%;
+  width: 23%;
+  height: 40%;
+  background-color: rgba(128,128,128, .2);
+  border-radius: 10px;
+}
+
+p {
+  padding-top: 10px;
 }
