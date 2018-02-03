@@ -12,23 +12,25 @@ class App extends Component {
 
 
   fetchData(){
-    fetch('https://api-wufthacks.xlabs.one:8243/facebookGraphAPI/1.0.0/v2.11/me?access_token=EAACD7kf3Pg8BANrTtBmJRfyk2gHYjSY1kWx9lCoHNPPak3osdyYHIh8kV8IfQrUSpvRYMRuZCQSqpYa4fPeImHYlH3TFu4EOue2Re56EZCpIAQjWlufIM4HuZCAItt8O5jxEZB2ZAv4T933jCIeb3ZBqjOFNG5dBmrOTU1o8hyiwZDZD&fields=cover%2Cname%2Cid%2Cabout%2C%20gender', {
+    fetch('https://api-wufthacks.xlabs.one:8243/facebookGraphAPI/1.0.0/v2.11/me?access_token=EAACD7kf3Pg8BANrTtBmJRfyk2gHYjSY1kWx9lCoHNPPak3osdyYHIh8kV8IfQrUSpvRYMRuZCQSqpYa4fPeImHYlH3TFu4EOue2Re56EZCpIAQjWlufIM4HuZCAItt8O5jxEZB2ZAv4T933jCIeb3ZBqjOFNG5dBmrOTU1o8hyiwZDZD&fields=cover%2Cname%2Cid%2Cabout', {
       headers: {
         "Accept": "application/json",
-       // "X-Api-Key": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYW1lc2FydGh1ciIsImV4cCI6MTUxODUzMjIxOH0.-RMBLl5LQXVSyK3HOaJtoz3tJzictVIYo_ePC-fcYGNDyFjQ8QK-zSnEiDbpWCvPafjG8g3ptz3fauvbcsvTGg",
+        "X-Api-Key": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYW1lc2FydGh1ciIsImV4cCI6MTUxODUzMjIxOH0.-RMBLl5LQXVSyK3HOaJtoz3tJzictVIYo_ePC-fcYGNDyFjQ8QK-zSnEiDbpWCvPafjG8g3ptz3fauvbcsvTGg",
         "Authorization": "Bearer d515abaf-dcf7-341e-ac14-099b63c5c1c3",
        // "Cache-Control": "no-cache",
        // "Postman-Token": "f0136045-e306-276a-e410-efbea980d06a",
-       // "Access-Control-Allow-Origin":'*'
+        "Access-Control-Allow-Origin":'*'
       }
     })
     .then(response=>response.json())
-    .then((responseData, err) => {
-      console.log(responseData.gender)
-    })
-      // .then(contacts => this.setState({contacts}))
-      // .catch(error => console.log('parsing failed',error))
+    .then(parsedJSON => parsedJSON.results.map(user =>({
+      name:`${user.gender}`
+        }
+      )))
+      .then(contacts => this.setState({contacts}))
+      .catch(error => console.log('parsing failed',error))
   }
+
 
   render() {
     const {contacts} = this.state;
@@ -51,10 +53,15 @@ class App extends Component {
             <div id="name">Firstname Last</div> 
             <div>Gender</div>
             <div>Birth</div>
+            <div>Language: ENGLISH</div>
             </div>
+            <div className="App-calls" />
             <div className="App-input" />
+            <div className="App-specs">
+            <div className="text">Estimated Salary: $20,000-$30,000</div>
             </div>
-<div className="panel-group">
+            </div>
+        <div className="panel-group">
        {
            contacts.length > 0 ? contacts.map(contact => {
                const {name} = contact;
