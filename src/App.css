@@ -22,8 +22,8 @@ div{
 }
 
 .App-logo {
-  animation: App-logo-spin 20s linear;
-  animation-duration: 1s;
+  animation: App-logo-spin infinite linear;
+  animation-duration: 7s;
   width: 70%;
   padding-top: 10%;
 }
@@ -76,6 +76,10 @@ div{
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform-origin: rotate(360deg); }
+    0%{ transform: scale(1,1); }
+    50% { transform: scale(-1,1); }
+    100% { transform: scale(1,1); }
+
+  /*from { transform: rotate(0deg); }
+  to { transform-origin: rotate(360deg); }*/
 }
