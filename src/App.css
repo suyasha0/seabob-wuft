@@ -43,6 +43,38 @@ div{
   font-size: 1.5em;
 }
 
+.App-pic {
+  position: fixed;
+  top: 17%;
+  left: 14%;
+  width: 150px;
+  height: 150px;
+  background-color: grey;
+}
+
+.App-desc {
+  position: fixed;
+  top: 17%;
+  left: 25.7%;
+  width: 19%;
+  text-align: center;
+}
+
+#name {
+  font-size: 1.5em;
+}
+
+.App-input {
+  position: fixed;
+  top: 50%;
+  left: 15%;
+  width: 30%;
+  height: 40%;
+  background-color: grey;
+  opacity: .2;
+  border-radius: 10px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform-origin: rotate(360deg); }
