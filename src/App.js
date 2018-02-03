@@ -48,20 +48,34 @@ class App extends Component {
         <div className="App-container">
         <div className="App-sidebar"> <img src={logo} className="App-logo" alt="logo" /></div>
         <div className="App-title">Customer Profile</div>
-        </div>
-        <div className="panel-group">
+            <div className="App-pic" />
+            <div className="App-desc"> 
+            <div id="name">Firstname Last</div> 
+            <div>Gender</div>
+            <div>Birth</div>
+            </div>
+            <div className="App-input" />
+            </div>
+<div className="panel-group">
        {
            contacts.length > 0 ? contacts.map(contact => {
                const {name} = contact;
                return <h1 title={name}>
                </h1>
            }) : null
-       }
-   </div>
-      </div>
+       } 
+       </div>
+
+            
+
+     </div> 
     );
   }
 }
+
+
+
+
 
 
 /*
