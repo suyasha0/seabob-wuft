@@ -8,34 +8,64 @@ var request = new Request('https://api-wufthacks.xlabs.one:8243/facebookGraphAPI
        "Authorization": "Bearer d515abaf-dcf7-341e-ac14-099b63c5c1c3",})
 });
 
-//var customerName;
+var globalName;
+var globalGender;
+var globalBirthday;
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+      name : "",
+      gender : "",
+      work : "",
+      birthday : "",
+      education : "",
+      interests : "",
+      relationship_status : "",
+
+    }
+  }
 
 fetchData(){
 fetch(request).then(response=>response.json())
 .then(responseData=>{
-//this.customerName = JSON.stringify(responseData.name, null, 2);
-//console.log(customerName);
+  globalName = responseData.name;
+  globalGender = responseData.gender;
+  globalBirthday = responseData.birthday;
+  if(this.state.name === ""){
+    this.setState({
+      name: globalName
+    });
+  }
+  if(this.state.gender === ""){
+    this.setState({
+      gender: globalGender
+    });
+  }
+  if(this.state.birthday === ""){
+    this.setState({
+      birthday: globalBirthday
+    });
+  }
 });
 }
 
-
   render() {
+    this.fetchData();
     return (
       <div className="App">
-              <button className="btn btn-sm btn-danger" onClick={(e) => {
-                        this.fetchData();    
-                    }}>Fetch now</button>
         <div className="App-container">
         <div className="App-sidebar"> <img src={logo} className="App-logo" alt="logo" /></div>
         <div className="App-title">Customer Profile</div>
             <div className="App-pic" />
-            <div className="App-desc"> 
-            <div id="name">Name</div> 
-            <div>Gender</div>
-            <div>Age</div>
-            <div>Preferred Language: ENGLISH</div>
+            <div className="App-desc">
+            <Person name={this.state.name}/>
+            <Person gender={this.state.gender}/>
+            <Person birthday={this.state.birthday}/>
+            <div>Language: ENGLISH</div>
             </div>
             <div className="App-calls">
               <h4>Call History</h4>
@@ -60,7 +90,7 @@ fetch(request).then(response=>response.json())
               </tbody>
             </table>
             </div>
-            <div className="App-input"><h3>Reason for calling: </h3> 
+            <div className="App-input"><h3>Reason for calling: </h3>
             <form>
             <label>
               <input type="text" name="issue" />
@@ -136,8 +166,20 @@ fetch(request).then(response=>response.json())
               </tbody>
             </table></div>
             </div>
-     </div> 
+     </div>
     );
+  }
+}
+
+class Person extends React.Component{
+  render(){
+    return (
+      <div>
+      <div id="name">{this.props.name}</div>
+      <div id="gender">{this.props.gender}</div>
+      <div id="birthday">{this.props.birthday}</div>
+      </div>
+    )
   }
 }
 
