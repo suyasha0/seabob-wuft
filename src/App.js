@@ -120,7 +120,7 @@ fetch(request).then(response=>response.json())
               </tbody>
             </table>
             </div>
-            <div className="App-personal">
+            <div id="rec" className="App-personal">
               <h4>Personal</h4>
               <table class="table text-center">
               <tbody>

@@ -46,10 +46,10 @@ div{
 .App-pic {
   position: fixed;
   top: 17%;
-  left: 13%;
+  left: 15%;
   width: 150px;
-  height: 150px;
-  background-color: grey;
+  height: 162px;
+  background: url("person.png");
 }
 
 .App-desc {
@@ -143,3 +143,4 @@ div{
 p {
   padding-top: 10px;
 }
+
