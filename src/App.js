@@ -157,7 +157,7 @@ fetchDataTwo(){
               </tbody>
             </table>
             </div>
-            <div cassName="App-balance"></div>
+            <div className="App-balance">12</div>
             <div className="App-input"><h3>Reason for calling: </h3>
             <form>
             <label>

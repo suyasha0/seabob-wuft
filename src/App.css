@@ -143,6 +143,12 @@ div{
 }
 
 .App-balance{
+  position: fixed;
+  top: 20%;
+  left: 45%;
+  width: 25%;
+  height: 40%;
+  font-size: 6em;
   font-family: 'Lobster Two', cursive;
 }
 
