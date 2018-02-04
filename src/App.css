@@ -8,6 +8,7 @@ div{
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
 
 .App {
   text-align: center;
@@ -48,8 +49,8 @@ div{
   top: 17%;
   left: 13%;
   width: 150px;
-  height: 150px;
-  background-color: grey;
+  height: 162px;
+  background: url("person.png");
 }
 
 .App-desc {
@@ -66,6 +67,7 @@ div{
 }
 
 .App-input {
+  resize: none;
   position: fixed;
   top: 50%;
   left: 13%;
@@ -133,13 +135,27 @@ div{
 .App-social {
   position: fixed;
   top: 50%;
-  left: 45%;
-  width: 23%;
+  left: 46%;
+  width: 25%;
   height: 40%;
   background-color: rgba(128,128,128, .2);
   border-radius: 10px;
 }
 
+.App-balance{
+  font-family: 'Lobster Two', cursive;
+}
+
 p {
   padding-top: 10px;
+}
+
+#gender{
+  text-transform: uppercase;
+}
+
+textarea{
+  width: 90%;
+  max-height: 80%;
+  font-size: 1em;
 }

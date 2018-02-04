@@ -125,13 +125,14 @@ fetchDataTwo(){
       <div className="App">
         <div className="App-container">
         <div className="App-sidebar"> <img src={logo} className="App-logo" alt="logo" /></div>
-        <div className="App-title">Customer Profile</div>
+        <div className="App-title"><Person name={this.state.name}/></div>
             <div className="App-pic" />
             <div className="App-desc">
-            <Person name={this.state.name}/>
             <Person gender={this.state.gender}/>
             <Person birthday={this.state.birthday}/>
-            <div>Language: ENGLISH</div>
+            <div>Preferred Language: ENGLISH</div>
+            <div> Primary : (646)-908-2301 </div>
+            <div> Secondary: (646)-921-2222 </div>
             </div>
             <div className="App-calls">
               <h4>Call History</h4>
@@ -159,7 +160,10 @@ fetchDataTwo(){
             <div className="App-input"><h3>Reason for calling: </h3>
             <form>
             <label>
-              <input type="text" name="issue" />
+              
+              <textarea rows="8" cols="50">
+              Insert brief summary of complaint here.
+              </textarea>
             </label>
             <input type="submit" value="Submit" />
             </form> </div>
@@ -186,7 +190,7 @@ fetchDataTwo(){
               </tbody>
             </table>
             </div>
-            <div className="App-personal">
+            <div id="rec" className="App-personal">
               <h4>Personal</h4>
               <table class="table text-center">
               <tbody>
