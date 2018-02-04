@@ -174,8 +174,7 @@ fetchDataTwo(){
             <form>
             <label>
               <p>
-              <textarea rows="8" cols="50">
-              Insert brief summary of complaint here.
+              <textarea rows="8" cols="50" placeholder="Insert brief summary of complaint here.">
               </textarea></p>
             </label>
               <i class="fas fa-arrow-right fa-2x"></i>

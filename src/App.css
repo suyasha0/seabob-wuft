@@ -23,7 +23,7 @@ div{
 }
 
 .App-logo {
-  animation: App-logo-spin 1s linear;
+  animation: App-logo-spin infinite linear;
   animation-duration: 7s;
   width: 70%;
   padding-top: 10%;
@@ -144,7 +144,7 @@ div{
 
 .App-balance{
   position: fixed;
-  top: 12%;
+  top: 26%;
   left: 45%;
   width: 25%;
   height: 40%;
@@ -174,9 +174,9 @@ textarea{
 
 #balance{
   position: fixed;
-  left: 47%;
-  top: 9%;
-  font-size: 1.5em;
+  left: 51%;
+  top: 20%;
+  font-size: 2.5em;
 }
 
 .fa-angle-double-right{
