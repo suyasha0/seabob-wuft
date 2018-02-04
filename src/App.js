@@ -8,7 +8,7 @@ var request = new Request('https://api-wufthacks.xlabs.one:8243/facebookGraphAPI
        "Authorization": "Bearer d515abaf-dcf7-341e-ac14-099b63c5c1c3"})
 });
 
-var requestTwo = new Request('https://api-wufthacks.xlabs.one:8243/td/transaction/V1.0.0/transaction/all?page=1&size=3',{
+var requestTwo = new Request('https://api-wufthacks.xlabs.one:8243/td/transaction/V1.0.0/transaction/all?page=3002&size=3',{
   headers: new Headers({
        "Accept":"*/*",
        "Authorization": "Bearer 39978d51-2251-3a32-a9d8-4de1819a0795",
@@ -26,6 +26,8 @@ var globalAmount2;
 var globalDate3;
 var globalAmount3;
 
+var globalBalance;
+
 class App extends Component {
 
   constructor(props){
@@ -41,7 +43,9 @@ class App extends Component {
       date3: "",
       amount1: "",
       amount2: "",
-      amount3: ""
+      amount3: "",
+
+      balance: ""
     }
   }
 
@@ -72,7 +76,7 @@ fetchData(){
 fetchDataTwo(){
   fetch(requestTwo).then(response=>response.json())
   .then(responseData=>{
-    console.log(responseData.content[0]);
+    globalBalance = responseData.content[2].balance;
     globalAmount1 = responseData.content[0].amount;
     globalDate1 = responseData.content[0].transactionDate;
     globalAmount2 = responseData.content[1].amount;
@@ -113,6 +117,11 @@ fetchDataTwo(){
     if(this.state.amount3 === ""){
       this.setState({
         amount3: globalAmount3
+      });
+    }
+    if(this.state.balance === ""){
+      this.setState({
+        balance: globalBalance
       });
     }
   });
@@ -157,11 +166,12 @@ fetchDataTwo(){
               </tbody>
             </table>
             </div>
-            <div cassName="App-balance"></div>
+            <div className="App-balance"></div>
+            <div>Balance: {this.state.balance}</div>
             <div className="App-input"><h3>Reason for calling: </h3>
             <form>
             <label>
-              
+
               <textarea rows="8" cols="50">
               Insert brief summary of complaint here.
               </textarea>
