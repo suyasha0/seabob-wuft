@@ -145,7 +145,7 @@ fetchDataTwo(){
             </div>
             <div className="App-calls">
               <h4>Call History</h4>
-              <table class="table text-center">
+              <table className="table text-center">
               <tbody>
                 <tr>
                   <td>Date</td>
@@ -163,12 +163,12 @@ fetchDataTwo(){
                   <td>Employee</td>
                   <td>Paw Newman</td>
                 </tr>
-              </tbody>
+              </tbody><i className="fas fa-angle-double-right"></i>
             </table>
             </div>
-
+            <div id="balance">Balance:</div>
             <div className="App-balance">
-            Balance: {this.state.balance}
+            ${this.state.balance}
             </div>
             <div className="App-input"><h3>Reason for calling: </h3>
             <form>
@@ -182,7 +182,7 @@ fetchDataTwo(){
             </form> </div>
             <div className="App-transactions">
               <h4>Transaction History</h4>
-              <table class="table text-center">
+              <table className="table text-center">
               <tbody>
                 <tr>
                   <td>Date</td>
@@ -200,7 +200,7 @@ fetchDataTwo(){
                   <td>{this.state.date1}</td>
                   <td>{this.state.amount1}</td>
                 </tr>
-              </tbody>
+              </tbody><i className="fas fa-angle-double-right"></i>
             </table>
             </div>
             <div id="rec" className="App-personal">
@@ -223,7 +223,7 @@ fetchDataTwo(){
                   <td>Subscriptions</td>
                   <td>Amazon Prime, Netflix</td>
                 </tr>
-              </tbody>
+              </tbody><i className="fas fa-angle-double-right"></i>
             </table>
             </div>
             <div className="App-social">

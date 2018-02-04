@@ -148,7 +148,7 @@ div{
   left: 45%;
   width: 25%;
   height: 40%;
-  font-size: 6em;
+  font-size: 4em;
   font-family: 'Lobster Two', cursive;
 }
 
@@ -164,4 +164,11 @@ textarea{
   width: 90%;
   max-height: 80%;
   font-size: 1em;
+}
+
+#balance{
+  position: fixed;
+  left: 47%;
+  top: 9%;
+  font-size: 1.5em;
 }
