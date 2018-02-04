@@ -167,8 +167,9 @@ textarea{
 }
 
 .fa-arrow-right{
-  float: right;
-  width: 40%;
+  position: fixed;
+  top: 68%;
+  left: 41%;
 }
 
 #balance{
@@ -181,4 +182,8 @@ textarea{
 .fa-angle-double-right{
   position: fixed;
   left: 91%;
+}
+
+p{
+  padding-top: 5%;
 }

@@ -173,12 +173,12 @@ fetchDataTwo(){
             <div className="App-input"><h3>Reason for calling: </h3>
             <form>
             <label>
-
+              <p>
               <textarea rows="8" cols="50">
               Insert brief summary of complaint here.
-              </textarea>
+              </textarea></p>
             </label>
-              <i class="fas fa-arrow-right"></i>
+              <i class="fas fa-arrow-right fa-2x"></i>
             </form> </div>
             <div className="App-transactions">
               <h4>Transaction History</h4>
