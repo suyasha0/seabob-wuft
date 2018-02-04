@@ -153,3 +153,9 @@ p {
 #gender{
   text-transform: uppercase;
 }
+
+textarea{
+  width: 90%;
+  max-height: 80%;
+  font-size: 1em;
+}
