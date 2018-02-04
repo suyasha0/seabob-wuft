@@ -172,3 +172,8 @@ textarea{
   top: 9%;
   font-size: 1.5em;
 }
+
+.fa-angle-double-right{
+  position: fixed;
+  left: 90%;
+}
