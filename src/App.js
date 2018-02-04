@@ -167,8 +167,9 @@ fetchDataTwo(){
             </table>
             </div>
 
-            <div className="App-balance"></div>
-            <div>Balance: {this.state.balance}</div>
+            <div className="App-balance">
+            Balance: {this.state.balance}
+            </div>
             <div className="App-input"><h3>Reason for calling: </h3>
             <form>
             <label>
