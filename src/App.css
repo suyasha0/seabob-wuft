@@ -166,6 +166,11 @@ textarea{
   font-size: 1em;
 }
 
+.fa-arrow-right{
+  float: right;
+  width: 40%;
+}
+
 #balance{
   position: fixed;
   left: 47%;

@@ -178,7 +178,7 @@ fetchDataTwo(){
               Insert brief summary of complaint here.
               </textarea>
             </label>
-            <button type="button">Submit</button>
+              <i class="fas fa-arrow-right"></i>
             </form> </div>
             <div className="App-transactions">
               <h4>Transaction History</h4>
