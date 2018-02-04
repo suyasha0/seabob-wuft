@@ -62,7 +62,6 @@ fetch(request).then(response=>response.json())
         <div className="App-title"><Person name={this.state.name}/></div>
             <div className="App-pic" />
             <div className="App-desc">
-            <div> Gender </div>
             <Person gender={this.state.gender}/>
             <Person birthday={this.state.birthday}/>
             <div>Preferred Language: ENGLISH</div>

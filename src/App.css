@@ -8,6 +8,7 @@ div{
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
 
 .App {
   text-align: center;
@@ -46,7 +47,7 @@ div{
 .App-pic {
   position: fixed;
   top: 17%;
-  left: 15%;
+  left: 13%;
   width: 150px;
   height: 162px;
   background: url("person.png");
@@ -140,7 +141,14 @@ div{
   border-radius: 10px;
 }
 
+.App-balance{
+  font-family: 'Lobster Two', cursive;
+}
+
 p {
   padding-top: 10px;
 }
 
+#gender{
+  text-transform: uppercase;
+}
