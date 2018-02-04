@@ -95,7 +95,10 @@ fetch(request).then(response=>response.json())
             <div className="App-input"><h3>Reason for calling: </h3>
             <form>
             <label>
-              <input type="text" name="issue" />
+              
+              <textarea rows="8" cols="50">
+              Insert brief summary of complaint here.
+              </textarea>
             </label>
             <input type="submit" value="Submit" />
             </form> </div>
