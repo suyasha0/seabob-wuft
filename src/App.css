@@ -41,15 +41,15 @@ div{
   position: fixed;
   top: 8%;
   left: 15%;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .App-pic {
   position: fixed;
   top: 17%;
   left: 13%;
-  width: 150px;
-  height: 162px;
+  width: 11.3%;
+  height: 24.7%;
   background: url("person.png");
 }
 
@@ -63,7 +63,7 @@ div{
 }
 
 #name {
-  font-size: 1.5em;
+  font-size: 2.4rem;
 }
 
 .App-input {
@@ -176,7 +176,7 @@ textarea{
   position: fixed;
   left: 47%;
   top: 9%;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .fa-angle-double-right{
